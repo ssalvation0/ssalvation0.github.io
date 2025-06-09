@@ -1,0 +1,446 @@
+/* ==========================================================================
+   1. Загальні стилі та змінні
+   ========================================================================== */
+   :root {
+    --bg-light-gray: #f0f0f0;
+    --bg-dark-gray: #e0e0e0;
+    --text-dark: #333333;
+    --text-light: #ffffff;
+    --font-family: 'Montserrat', sans-serif;
+}
+
+body.dark-theme {
+    --bg-light-gray: #1a1a1a;
+    --bg-dark-gray: #2c2c2c;
+    --text-dark: #f0f0f0;
+    --text-light: #e0e0e0;
+}
+
+body, .header, .skills-container, .skill-category, .project-case-study, .hobby-item {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--bg-light-gray);
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 30px;
+}
+
+h1, h2, h3 { line-height: 1.2; margin-bottom: 20px; }
+h1 { font-size: 5rem; }
+h2 { font-size: 2.5rem; text-align: center; padding-top: 40px; }
+h3 { font-size: 1.5rem; }
+p { margin-bottom: 15px; }
+a { text-decoration: none; color: inherit; }
+
+.section-subtitle {
+    max-width: 600px;
+    margin: 0 auto 40px auto;
+    text-align: center;
+}
+
+/* ==========================================================================
+   2. Перевикористовувані компоненти
+   ========================================================================== */
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-top: 20px;
+    background-color: var(--bg-dark-gray);
+    color: var(--text-dark);
+    border: 1px solid var(--text-dark);
+    transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: var(--text-dark);
+    color: var(--bg-light-gray);
+    transform: translateY(-3px);
+}
+
+.btn.btn-secondary {
+    background-color: transparent;
+    border: 1px solid var(--text-dark);
+}
+
+.btn.btn-secondary:hover {
+    background-color: var(--text-dark);
+    color: #fff;
+}
+
+.btn i { margin-right: 8px; }
+
+/* ==========================================================================
+   3. Хедер та Навігація
+   ========================================================================== */
+   .header {
+    background-color: var(--bg-dark-gray);
+    font-family: var(--font-family);
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: top 0.4s ease-in-out, box-shadow 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.header.header-hidden { top: -120px; }
+
+.main-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main-nav .logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    border: 2px solid var(--text-dark);
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+}
+
+.main-nav-list {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.main-nav-list li { margin-left: 25px; }
+.main-nav-list li a { font-weight: 500; }
+
+.hamburger-btn {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: var(--text-dark);
+}
+
+.controls-container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.theme-switcher-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: var(--text-dark);
+}
+
+.theme-switcher-btn .fa-moon {
+    display: none;
+}
+.dark-theme .theme-switcher-btn .fa-sun {
+    display: none;
+}
+.dark-theme .theme-switcher-btn .fa-moon {
+    display: block;
+}
+
+/* ==========================================================================
+   4. Секції Головної Сторінки
+   ========================================================================== */
+/* --- Hero Section --- */
+.hero-section { background-color: var(--bg-dark-gray); padding: 80px 0; }
+.hero-container { display: flex; justify-content: space-between; align-items: center; }
+.hero-text { flex: 1; }
+.hero-text h1 { font-weight: 700; }
+.hero-text p { font-size: 1.2rem; font-weight: 500; }
+.hero-image {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    margin-left: 40px;
+    align-self: flex-end;
+    border: 4px solid #fff;
+    border-radius: 20%;}
+
+/* --- About & Portfolio Previews --- */
+.about-section { padding: 60px 0; }
+.about-section .container { max-width: 800px; text-align: center; }
+#portfolio-preview { padding: 60px 0; background-color: var(--bg-dark-gray); text-align: center; }
+
+/* --- Skills Section --- */
+.skills-section { padding: 60px 0; }
+.skills-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; margin-top: 40px; }
+.skill-category { background-color: #fff; padding: 25px 30px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); }
+.skill-category h3 { margin-top: 0; margin-bottom: 20px; border-bottom: 2px solid var(--bg-light-gray); padding-bottom: 10px; }
+.skill-category ul { list-style: none; padding: 0; margin: 0; }
+.skill-category li { display: flex; align-items: center; margin-bottom: 15px; font-size: 1.1rem; }
+.skill-category i { font-size: 1.2rem; margin-right: 15px; color: var(--text-dark); width: 20px; text-align: center; }
+
+/* --- Contact Section --- */
+.contact-section { padding: 60px 0; background-color: var(--bg-dark-gray); }
+.contact-container { display: flex; gap: 50px; margin-top: 40px; }
+.contact-form { flex: 2; }
+.social-media { flex: 1; }
+.social-media ul { list-style: none; padding: 0; }
+.social-media li { margin-bottom: 15px; }
+.social-media a { display: flex; align-items: center; }
+.social-media a i { font-size: 1.6rem; margin-right: 18px; width: 25px; text-align: center; color: #555; transition: transform 0.3s ease, color 0.3s ease; }
+.social-media a:hover i { transform: scale(1.15); color: #000; }
+form .form-group-inline { display: flex; gap: 20px; margin-bottom: 20px; }
+form input, form textarea { width: 100%; padding: 12px; border: none; border-radius: 5px; background-color: #f0f0f0; }
+form textarea { margin-bottom: 20px; resize: vertical; }
+.btn-send { background-color: #555; color: #fff; padding: 12px 30px; border: none; border-radius: 5px; cursor: pointer; font-weight: bold; float: right; transition: background-color 0.3s; }
+.btn-send:hover { background-color: #222; }
+
+/* ==========================================================================
+   5. Стилі Окремих Сторінок
+   ========================================================================== */
+/* --- Portfolio Page --- */
+.portfolio-page { padding: 60px 0; }
+.portfolio-page h1 { text-align: center; font-size: 2.5rem; margin-bottom: 10px; }
+.back-link-container { text-align: center; margin-bottom: 40px; }
+.project-case-study { background-color: #fff; padding: 40px; border-radius: 10px; box-shadow: 0 5px 25px rgba(0, 0, 0, 0.07); max-width: 900px; margin: 0 auto; }
+.project-case-study h2 { text-align: left; font-size: 2rem; margin-top: 0; }
+.project-summary { font-size: 1.1rem; color: #555; margin-bottom: 40px; font-style: italic; }
+.project-details h3 { font-size: 1.5rem; border-bottom: 2px solid var(--text-dark); padding-bottom: 10px; margin-top: 40px; margin-bottom: 20px; }
+.tech-stack { list-style: none; padding: 0; }
+.tech-stack li { background-color: var(--bg-light-gray); display: inline-block; padding: 8px 15px; margin: 5px; border-radius: 20px; font-size: 0.9rem; }
+.tech-stack li span { font-weight: bold; }
+.project-details ol { padding-left: 20px; }
+.project-details ol li { margin-bottom: 10px; }
+.project-links { margin-top: 40px; text-align: center; }
+
+/* --- About Me Page --- */
+.about-page { padding: 60px 0; }
+.about-page h1 { text-align: center; font-size: 2.5rem; margin-bottom: 10px; }
+.about-page .section-subtitle { text-align: center; margin-bottom: 20px; }
+.about-page .about-content { max-width: 800px; margin: 0 auto 50px auto; text-align: center; line-height: 1.8; }
+.about-page .skills-section, .about-page .timeline-section, .about-page .languages-section, .about-page .hobbies-section { max-width: 800px; margin: 0 auto 50px auto; padding: 0; background-color: transparent; }
+.about-page .skills-section h2, .about-page .timeline-section h2, .about-page .languages-section h2, .about-page .hobbies-section h2 { text-align: center; margin-bottom: 30px; font-size: 2rem; }
+.about-page .skills-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; }
+.about-page .skill-item { background-color: var(--bg-dark-gray); padding: 12px 25px; border-radius: 5px; font-weight: 500; }
+.languages-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; background-color: #fff; padding: 30px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); }
+.language-item p { margin: 0 0 10px 0; font-weight: 500; font-size: 1.1rem; }
+.language-dots .dot { display: inline-block; width: 15px; height: 15px; border-radius: 50%; background-color: var(--bg-dark-gray); margin-right: 5px; }
+.language-dots .dot.filled { background-color: var(--text-dark); }
+.hobbies-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 20px; }
+.hobby-item { background-color: #fff; padding: 20px; border-radius: 10px; text-align: center; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); }
+.hobby-item i { font-size: 2.5rem; color: var(--text-dark); margin-bottom: 15px; }
+.hobby-item p { margin: 0; font-weight: 500; }
+.timeline { position: relative; padding: 20px 0; }
+.timeline::before { content: ''; position: absolute; left: 10px; top: 0; bottom: 0; width: 2px; background-color: #ddd; }
+.timeline-item { position: relative; margin-bottom: 30px; padding-left: 40px; }
+.timeline-dot { position: absolute; left: 0; top: 5px; width: 22px; height: 22px; background-color: var(--text-dark); border: 3px solid #fff; border-radius: 50%; }
+.timeline-dot--current { background-color: #28a745; animation: pulse 2s infinite; }
+.timeline-content h3 { margin: 0 0 5px 0; font-size: 1.2rem; }
+.timeline-content p { margin: 0; font-size: 0.9rem; color: #666; }
+.download-cv-container { text-align: center; margin-top: 50px; }
+
+/* ==========================================================================
+   6. Анімації
+   ========================================================================== */
+@keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(40, 167, 69, 0.4); }
+    70% { box-shadow: 0 0 0 10px rgba(40, 167, 69, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(40, 167, 69, 0); }
+}
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in-element { opacity: 0; }
+.fade-in-element.is-visible { animation: fadeInUp 0.8s ease-out forwards; }
+
+.hero-text h1, .hero-text p, .hero-image { opacity: 0; }
+.hero-text h1 { animation: fadeInUp 0.8s ease-out 0.2s forwards; }
+.hero-text p { animation: fadeInUp 0.8s ease-out 0.4s forwards; }
+.hero-image { animation: fadeInUp 0.8s ease-out 0.6s forwards; }
+
+/* Staggered Animations */
+.skills-grid .skill-item, .languages-grid .language-item, .hobbies-grid .hobby-item { opacity: 0; transform: translateY(20px); transition: opacity 0.5s ease-out, transform 0.5s ease-out; }
+.skills-section.is-visible .skill-item, .languages-section.is-visible .language-item, .hobbies-section.is-visible .hobby-item { opacity: 1; transform: translateY(0); }
+.skills-section.is-visible .skill-item:nth-child(2), .languages-section.is-visible .language-item:nth-child(2), .hobbies-section.is-visible .hobby-item:nth-child(2) { transition-delay: 0.1s; }
+.skills-section.is-visible .skill-item:nth-child(3), .languages-section.is-visible .language-item:nth-child(3), .hobbies-section.is-visible .hobby-item:nth-child(3) { transition-delay: 0.2s; }
+.skills-section.is-visible .skill-item:nth-child(4), .hobbies-section.is-visible .hobby-item:nth-child(4) { transition-delay: 0.3s; }
+.skills-section.is-visible .skill-item:nth-child(5) { transition-delay: 0.4s; }
+
+/* ==========================================================================
+   7. Футер
+   ========================================================================== */
+.footer {
+    padding: 15px 0;
+    background-color: #2c2c2c;
+    color: #a0a0a0;
+    font-size: 0.9rem;
+    text-align: center;
+    line-height: 1.5;
+}
+
+.footer p {
+    margin: 4px 0;
+}
+
+/* ==========================================================================
+   8. Адаптивність - ЗАВЖДИ В КІНЦІ ФАЙЛУ
+   ========================================================================== */
+   @media (max-width: 768px) {
+    h1 { font-size: 3.5rem; }
+    h2 { font-size: 2rem; }
+    .container { padding: 0 20px; }
+
+    /* --- Mobile Menu (Змінено для плавної анімації) --- */
+    .main-nav-list {
+        /* Властивості для позиціонування та вигляду */
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 85px;
+        left: 0;
+        width: 100%;
+        background-color: var(--bg-dark-gray);
+        padding: 10px 0;
+        text-align: center;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+
+        /* Властивості для анімації */
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-10px);
+        transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
+    }
+
+    .main-nav-list.nav-open {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+
+    .main-nav-list li { 
+        margin: 15px 0; 
+    }
+
+    .hamburger-btn { 
+        display: block; 
+    }
+
+    /* --- Mobile Sections --- */
+    .hero-container { flex-direction: column; text-align: center; gap: 30px; }
+    .hero-text { text-align: center; }
+    .hero-image { margin-left: 0; width: 200px; height: 200px; align-self: center; }
+    .contact-container, .form-group-inline { flex-direction: column; }
+    .form-group-inline { gap: 0; }
+    .form-group-inline input:first-child { margin-bottom: 20px; }
+    .skills-container { grid-template-columns: 1fr; }
+    .project-case-study, .about-page { padding: 20px; }
+    .timeline-item { padding-left: 30px; }
+    .timeline-dot { left: 5px; }
+    .about-page .hobbies-grid { grid-template-columns: 1fr 1fr; gap: 15px; }
+    .about-page .languages-grid { grid-template-columns: 1fr; gap: 25px; }
+    .about-page .language-item { display: flex; flex-direction: column; align-items: center; }
+    .about-page .skills-grid { gap: 10px; }
+    .about-page .hobby-item p { font-size: 0.9rem; }
+}
+
+/* ==========================================================================
+   Виправлення для темної теми (для всіх сторінок)
+   ========================================================================== */
+
+/* Робимо фон карток темним у темній темі */
+.dark-theme .project-case-study,
+.dark-theme .skill-category,
+.dark-theme .hobby-item,
+.dark-theme .languages-grid { /* <-- Додано фон для картки мов */
+    background-color: #2c2c2c;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Виправляємо колір тегів з технологіями на сторінці портфоліо */
+.dark-theme .tech-stack li {
+    background-color: #444;
+    color: #f0f0f0;
+}
+
+/* Виправляємо колір тексту в інших блоках, якщо потрібно */
+.dark-theme .project-summary,
+.dark-theme .timeline-content p,
+.dark-theme .about-page .skills-grid .skill-item { /* <-- Додано навички на сторінці About */
+    color: #a0a0a0;
+}
+
+/* Виправляємо колір рамки для фото на головній сторінці */
+.dark-theme .hero-image {
+    border-color: #444;
+}
+
+/* --- ДОДАНО ВИПРАВЛЕННЯ ДЛЯ СТОРІНКИ ABOUT ME --- */
+
+/* Виправляємо колір крапок для мов */
+.dark-theme .language-dots .dot {
+    background-color: #555; /* Колір для незаповнених крапок */
+}
+.dark-theme .language-dots .dot.filled {
+    background-color: #f0f0f0; /* Колір для заповнених крапок */
+}
+
+/* Виправляємо колір крапок на шкалі часу */
+.dark-theme .timeline-dot {
+    background-color: #a0a0a0;
+    border-color: #2c2c2c;
+}
+.dark-theme .timeline-dot--current {
+    background-color: #28a745; /* Зелена залишається без змін */
+}
+
+/* Виправляємо колір фону для карток навичок */
+.dark-theme .about-page .skill-item {
+     background-color: #444;
+}
+
+/* --- Стилі для перемикача мов --- */
+.lang-switcher {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+.lang-switcher a {
+    color: #888;
+    transition: color 0.3s ease;
+    padding: 0 5px;
+}
+.lang-switcher a:hover {
+    color: var(--text-dark);
+}
+.lang-switcher a.active {
+    color: var(--text-dark);
+}
+.lang-switcher span {
+    color: #ccc;
+}

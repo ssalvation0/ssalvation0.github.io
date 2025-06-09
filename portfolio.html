@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Nazar Stefiniv</title>
+    
+    <link rel="stylesheet" href="style.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+</head>
+<body>
+
+    <header class="header">
+        <div class="container">
+            <nav class="main-nav">
+                <a href="index.html" class="logo">N</a>
+                <ul class="main-nav-list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="index.html#skills">Skills</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+                <div class="controls-container">
+                    <div class="lang-switcher">
+                        <a href="portfolio.html" class="active">EN</a>
+                        <span>|</span>
+                        <a href="pl/portfolio.html">PL</a>
+                    </div>
+                    <button class="theme-switcher-btn" aria-label="Toggle theme">
+                        <i class="fa-solid fa-sun"></i>
+                        <i class="fa-solid fa-moon"></i>
+                    </button>
+                    <button class="hamburger-btn">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section class="portfolio-page">
+            <div class="container">
+                <h1 class="fade-in-element">My Portfolio</h1>
+                <div class="back-link-container fade-in-element">
+                    <a href="index.html" class="btn btn-secondary">
+                        <i class="fa-solid fa-arrow-left"></i> Back to Home
+                    </a>
+                </div>
+                <article class="project-case-study fade-in-element">
+                    
+                    <h2>Personal Portfolio Website</h2>
+                    <p class="project-summary">
+                        This is my first comprehensive project, created from scratch. The main goal was to develop a modern, clean, and interactive portfolio website to present my skills, experience, and future work.
+                    </p>
+
+                    <div class="project-details">
+                        <h3>Project Goal</h3>
+                        <p>To create a responsive single-page site (later expanded to a multi-page site) that would serve as my digital resume. It was important to demonstrate not only technical skills but also an understanding of design and UX/UI principles learned during my studies.</p>
+                        
+                        <h3>Technologies Used</h3>
+                        <ul class="tech-stack">
+                            <li><span>HTML5</span> - For creating a semantically correct site structure.</li>
+                            <li><span>CSS3</span> - For styling, including Flexbox and Grid for layout, as well as for implementing animations.</li>
+                            <li><span>JavaScript</span> - For adding interactivity: scroll animations, a dynamic header, and smooth transitions.</li>
+                            <li><span>Font Awesome</span> - For using vector icons.</li>
+                        </ul>
+
+                        <h3>Work Process & Key Decisions</h3>
+                        <p>The work was divided into several stages:</p>
+                        <ol>
+                            <li><strong>Design and Planning:</strong> At this stage, I relied on my design skills to create a minimalist and intuitive interface. A calm color palette and clean typography were chosen for better information perception.</li>
+                            <li><strong>Markup and Styling:</strong> The basic layout and styles were created. Special attention was paid to responsiveness to ensure the site displays correctly on different devices.</li>
+                            <li><strong>Adding Interactivity:</strong> Several key features were implemented using JavaScript: reveal-on-scroll animations, an animation for the hero section, and a hiding header. This made the site more "alive" and pleasant to use.</li>
+                        </ol>
+
+                        <h3>Challenges & Lessons Learned</h3>
+                        <p>The most interesting challenge was implementing smooth animations that would complement the page without overloading it. Working with JavaScript's `IntersectionObserver` to track the appearance of elements was excellent practice. The hardest part was making the design responsive for mobile devices. This project also allowed me to combine my mathematical thinking for script logic with my creativity for the visual part.</p>
+
+                        <div class="project-links">
+                            <a href="https://github.com/ssalvation0/myfirstsite/" class="btn" target="_blank">View on GitHub</a>
+                        </div>
+                    </div>
+
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; Designed & Built by Nazar Stefiniv</p>
+        </div>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>

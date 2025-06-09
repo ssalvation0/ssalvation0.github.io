@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Nazar Stefiniv</title>
+    
+    <link rel="stylesheet" href="../style.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+    <link rel="manifest" href="../site.webmanifest">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <nav class="main-nav">
+                <a href="index.html" class="logo">N</a>
+                <ul class="main-nav-list">
+                    <li><a href="index.html">Start</a></li>
+                    <li><a href="about.html">O Mnie</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="index.html#skills">Umiejętności</a></li>
+                    <li><a href="index.html#contact">Kontakt</a></li>
+                </ul>
+                <div class="controls-container">
+                    <div class="lang-switcher">
+                        <a href="../portfolio.html">EN</a>
+                        <span>|</span>
+                        <a href="portfolio.html" class="active">PL</a>
+                    </div>
+                    <button class="theme-switcher-btn" aria-label="Przełącz motyw">
+                        <i class="fa-solid fa-sun"></i>
+                        <i class="fa-solid fa-moon"></i>
+                    </button>
+                    <button class="hamburger-btn">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="portfolio-page">
+            <div class="container">
+                <h1 class="fade-in-element">Moje Portfolio</h1>
+                <div class="back-link-container fade-in-element">
+                    <a href="index.html" class="btn btn-secondary">
+                        <i class="fa-solid fa-arrow-left"></i> Powrót do strony głównej
+                    </a>
+                </div>
+                <article class="project-case-study fade-in-element">
+                    
+                    <h2>Osobista Strona-Portfolio</h2>
+                    <p class="project-summary">
+                        To mój pierwszy kompleksowy projekt, stworzony od zera. Głównym celem było opracowanie nowoczesnej, czystej i interaktywnej strony-wizytówki, aby zaprezentować moje umiejętności, doświadczenie i przyszłe prace.
+                    </p>
+
+                    <div class="project-details">
+                        <h3>Cel Projektu</h3>
+                        <p>Stworzenie responsywnej strony, która będzie służyć jako moje cyfrowe CV. Ważne było zademonstrowanie nie tylko umiejętności technicznych, ale także zrozumienia zasad projektowania i UX/UI, których nauczyłem się podczas studiów.</p>
+                        
+                        <h3>Użyte Technologie</h3>
+                        <ul class="tech-stack">
+                            <li><span>HTML5</span> - Do tworzenia semantycznie poprawnej struktury strony.</li>
+                            <li><span>CSS3</span> - Do stylizacji, w tym Flexbox i Grid do układu, a także do implementacji animacji.</li>
+                            <li><span>JavaScript</span> - Do dodawania interaktywności: animacji podczas przewijania, dynamicznego nagłówka i płynnych przejść.</li>
+                            <li><span>Font Awesome</span> - Do używania ikon wektorowych.</li>
+                        </ul>
+
+                        <h3>Proces Pracy i Kluczowe Decyzje</h3>
+                        <p>Praca została podzielona na kilka etapów:</p>
+                        <ol>
+                            <li><strong>Projekt i Planowanie:</strong> Na tym etapie opierałem się na swoich umiejętnościach projektowych, aby stworzyć minimalistyczny i intuicyjny interfejs. Wybrano spokojną paletę kolorów i czystą typografię dla lepszego odbioru informacji.</li>
+                            <li><strong>Kodowanie i Stylizacja:</strong> Stworzono podstawowy szkielet i style. Szczególną uwagę zwrócono на responsywność, aby strona poprawnie wyświetlała się na różnych urządzeniach.</li>
+                            <li><strong>Dodawanie Interaktywności:</strong> Za pomocą JavaScript zaimplementowano kilka kluczowych funkcji: animację pojawiania się elementów podczas przewijania, animację na pierwszym ekranie i ukrywający się nagłówek. To sprawiło, że strona stała się bardziej "żywa" i przyjemna w użyciu.</li>
+                        </ol>
+
+                        <h3>Wyzwania i Zdobyte Doświadczenie</h3>
+                        <p>Najciekawszym wyzwaniem było zaimplementowanie płynnych animacji, które uzupełniałyby stronę bez jej przeciążania. Praca z JavaScript `IntersectionObserver` do śledzenia wyglądu elementów była doskonałą praktyką. Najtrudniejszą częścią było dostosowanie projektu do urządzeń mobilnych. Ten projekt pozwolił mi również połączyć moje matematyczne myślenie w logice skryptu z moją kreatywnością w części wizualnej.</p>
+                        <div class="project-links">
+                            <a href="https://github.com/ssalvation0/myfirstsite/" class="btn" target="_blank">Zobacz na GitHub</a>
+                        </div>
+                    </div>
+
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; Zaprojektowano i stworzono przez Nazar Stefiniv.</p>
+        </div>
+    </footer>
+    
+    <script src="../script.js"></script>
+</body>
+</html>
