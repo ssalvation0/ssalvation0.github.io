@@ -359,7 +359,7 @@ form textarea { margin-bottom: 20px; resize: vertical; }
     .skills-container { grid-template-columns: 1fr; }
     .project-case-study, .about-page { padding: 20px; }
     .timeline-item { padding-left: 30px; }
-    .timeline-dot { left: 5px; }
+    .timeline-dot { left: 0px; }
     .about-page .hobbies-grid { grid-template-columns: 1fr 1fr; gap: 15px; }
     .about-page .languages-grid { grid-template-columns: 1fr; gap: 25px; }
     .about-page .language-item { display: flex; flex-direction: column; align-items: center; }
