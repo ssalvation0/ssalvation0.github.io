@@ -1,0 +1,24 @@
+
+/* 1. Базові стилі (змінні, скидання стилів, типографія) */
+@import 'base/_variables.css';
+@import 'base/_reset.css';
+@import 'base/_base.css';
+
+/* 2. Перевикористовувані компоненти (кнопки, галерея) */
+@import 'components/_buttons.css';
+@import 'components/_gallery.css';
+
+/* 3. Основна розмітка (хедер, футер) */
+@import 'layout/_header.css';
+@import 'layout/_footer.css';
+
+/* 4. Стилі для окремих сторінок */
+@import 'pages/_home.css';
+@import 'pages/_portfolio.css';
+@import 'pages/_about.css';
+
+/* 5. Стилі для темної теми */
+@import 'theme/_dark-theme.css';
+
+/* 6. Адаптивні стилі (завжди в кінці) */
+@import '_responsive.css';

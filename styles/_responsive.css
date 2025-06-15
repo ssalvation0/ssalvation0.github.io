@@ -1,0 +1,52 @@
+@media (max-width: 768px) {
+    h1 { font-size: 3.5rem; }
+    h2 { font-size: 2rem; }
+    .container { padding: 0 20px; }
+
+    .main-nav-list {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 85px;
+        left: 0;
+        width: 100%;
+        background-color: var(--bg-dark-gray);
+        padding: 10px 0;
+        text-align: center;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-10px);
+        transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
+    }
+
+    .main-nav-list.nav-open {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+
+    .main-nav-list li { 
+        margin: 15px 0; 
+    }
+
+    .hamburger-btn { 
+        display: block; 
+    }
+
+    .hero-container { flex-direction: column; text-align: center; gap: 30px; }
+    .hero-text { text-align: center; }
+    .hero-image { margin-left: 0; width: 200px; height: 200px; align-self: center; }
+    .contact-container, .form-group-inline { flex-direction: column; }
+    .form-group-inline { gap: 0; }
+    .form-group-inline input:first-child { margin-bottom: 20px; }
+    .skills-container { grid-template-columns: 1fr; }
+    .project-case-study, .about-page { padding: 20px; }
+    .timeline-item { padding-left: 30px; }
+    .timeline-dot { left: 0px; }
+    .about-page .hobbies-grid { grid-template-columns: 1fr 1fr; gap: 15px; }
+    .about-page .languages-grid { grid-template-columns: 1fr; gap: 25px; }
+    .about-page .language-item { display: flex; flex-direction: column; align-items: center; }
+    .about-page .skills-grid { gap: 10px; }
+    .about-page .hobby-item p { font-size: 0.9rem; }
+}

@@ -1,0 +1,33 @@
+.about-page { padding: 60px 0; }
+.about-page h1 { text-align: center; font-size: 2.5rem; margin-bottom: 10px; }
+.about-page .section-subtitle { text-align: center; margin-bottom: 20px; }
+.about-page .about-content { max-width: 800px; margin: 0 auto 50px auto; text-align: center; line-height: 1.8; }
+.about-page .skills-section, .about-page .timeline-section, .about-page .languages-section, .about-page .hobbies-section { max-width: 800px; margin: 0 auto 50px auto; padding: 0; background-color: transparent; }
+.about-page .skills-section h2, .about-page .timeline-section h2, .about-page .languages-section h2, .about-page .hobbies-section h2 { text-align: center; margin-bottom: 30px; font-size: 2rem; }
+.about-page .skills-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; }
+.about-page .skill-item { background-color: var(--bg-dark-gray); padding: 12px 25px; border-radius: 5px; font-weight: 500; }
+
+.languages-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; background-color: #fff; padding: 30px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); }
+.language-item p { margin: 0 0 10px 0; font-weight: 500; font-size: 1.1rem; }
+.language-dots .dot { display: inline-block; width: 15px; height: 15px; border-radius: 50%; background-color: var(--bg-dark-gray); margin-right: 5px; }
+.language-dots .dot.filled { background-color: var(--text-dark); }
+
+.hobbies-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 20px; }
+.hobby-item { background-color: #fff; padding: 20px; border-radius: 10px; text-align: center; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); }
+.hobby-item i { font-size: 2.5rem; color: var(--text-dark); margin-bottom: 15px; }
+.hobby-item p { margin: 0; font-weight: 500; }
+
+.timeline { position: relative; padding: 20px 0; }
+.timeline::before { content: ''; position: absolute; left: 10px; top: 0; bottom: 0; width: 2px; background-color: #ddd; }
+.timeline-item { position: relative; margin-bottom: 30px; padding-left: 40px; }
+.timeline-dot { position: absolute; left: 0; top: 5px; width: 22px; height: 22px; background-color: var(--text-dark); border: 3px solid #fff; border-radius: 50%; }
+.timeline-dot--current { background-color: #28a745; animation: pulse 2s infinite; }
+.timeline-content h3 { margin: 0 0 5px 0; font-size: 1.2rem; }
+.timeline-content p { margin: 0; font-size: 0.9rem; color: #666; }
+.download-cv-container { text-align: center; margin-top: 50px; }
+
+@keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(40, 167, 69, 0.4); }
+    70% { box-shadow: 0 0 0 10px rgba(40, 167, 69, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(40, 167, 69, 0); }
+}
