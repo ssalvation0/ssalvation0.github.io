@@ -5,9 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nazar Stefiniv - Web Developer</title>
     <meta name="description" content="Personal portfolio of Nazar Stefiniv, a computer science student specializing in web development and UX/UI design.">
-    
+    <link href="lightbox/css/lightbox.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="style.css">
-    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
@@ -72,17 +71,33 @@
             </div>
         </section>
 
-        <section id="portfolio-preview">
-            <div class="container">
-                <h2 class="fade-in-element">Portfolio</h2>
-                <p class="section-subtitle fade-in-element">
-                    I believe the best way to demonstrate skills is by showing real work. My first portfolio piece is a detailed case study on how this very website was built—from the initial idea to the final code.
-                </p>
-                <div class="fade-in-element">
-                    <a href="portfolio.html" class="btn">View Case Study</a>
-                </div>
-            </div>
-        </section>
+
+<section id="portfolio-preview" class="gallery-section">
+    <div class="container">
+        <h2 class="fade-in-element">Behind the Scenes: Code Highlights</h2>
+        <p class="section-subtitle fade-in-element">
+            This website was built from scratch. Here are a few examples of the code that powers its features. Click on any image to see the details.
+        </p>
+        <div class="gallery-grid fade-in-element">
+            <!-- 1. Зображення з таблицями стилів -->
+            <a href="images/styles.png" data-lightbox="code-gallery" data-title="CSS Structure: This CSS code defines the layout and design of the website, including responsive styles for different screen sizes. It uses Flexbox for layout and includes styles for various components like buttons, forms, and navigation.">
+                <img src="images/styles.png" alt="Example of CSS structure">
+            </a>
+            <!-- 2. Зображення зі скриптом хедера -->
+            <a href="images/header.png" data-lightbox="code-gallery" data-title="Dynamic Header Toggle: This JavaScript code allows users to hide or show the header, enhancing user experience by providing a cleaner interface when needed.">
+                <img src="images/header.png" alt="JavaScript for hiding header">
+            </a>
+            <!-- 3. Зображення зі скриптом перемикача теми -->
+            <a href="images/themes.png" data-lightbox="code-gallery" data-title="Dynamic Theme Switcher: This JavaScript code allows users to toggle between light and dark themes, enhancing accessibility and user preference. The theme is saved in local storage for persistence across sessions.">
+                <img src="images/themes.png" alt="JavaScript for theme switcher">
+            </a>
+        </div>
+        <!-- Кнопка була змінена -->
+        <div class="fade-in-element" style="text-align: center; margin-top: 40px;">
+            <a href="portfolio.html" class="btn">View more</a>
+        </div>
+    </div>
+</section>
 
         <section id="skills" class="skills-section">
             <div class="container">
@@ -150,7 +165,7 @@
             <p>&copy; Designed & Built by Nazar Stefiniv</p>
         </div>
     </footer>
-    
+    <script src="lightbox/js/lightbox-plus-jquery.min.js"></script>яя
     <script src="script.js"></script>
 </body>
 </html>

@@ -40,14 +40,12 @@ document.addEventListener("DOMContentLoaded", function() {
     const themeSwitcherBtn = document.querySelector('.theme-switcher-btn');
     const body = document.body;
 
-    // Функція для застосування теми
     const applyTheme = (theme) => {
         body.classList.remove('dark-theme', 'light-theme');
         body.classList.add(theme);
         localStorage.setItem('theme', theme);
     };
 
-    // Перевіряємо збережену тему при завантаженні сторінки
     const savedTheme = localStorage.getItem('theme') || 'light-theme';
     applyTheme(savedTheme);
 
