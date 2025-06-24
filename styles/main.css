@@ -1,24 +1,16 @@
+@import url("base/_variables.css");
+@import url("base/_reset.css");
+@import url("base/_base.css");
 
-/* 1. Базові стилі (змінні, скидання стилів, типографія) */
-@import 'base/_variables.css';
-@import 'base/_reset.css';
-@import 'base/_base.css';
+@import url("components/_buttons.css");
+@import url("components/_gallery.css");
 
-/* 2. Перевикористовувані компоненти (кнопки, галерея) */
-@import 'components/_buttons.css';
-@import 'components/_gallery.css';
+@import url("layout/_header.css");
+@import url("layout/_footer.css");
 
-/* 3. Основна розмітка (хедер, футер) */
-@import 'layout/_header.css';
-@import 'layout/_footer.css';
+@import url("pages/_home.css");
+@import url("pages/_portfolio.css");
+@import url("pages/_about.css");
 
-/* 4. Стилі для окремих сторінок */
-@import 'pages/_home.css';
-@import 'pages/_portfolio.css';
-@import 'pages/_about.css';
-
-/* 5. Стилі для темної теми */
-@import 'theme/_dark-theme.css';
-
-/* 6. Адаптивні стилі (завжди в кінці) */
-@import '_responsive.css';
+@import url("theme/_dark-theme.css");
+@import url("_responsive.css");
