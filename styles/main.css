@@ -5,7 +5,7 @@
 
 /* --- Utils/Responsive & Theme --- */
 @import url('_responsive.css');
-@import url('theme/dark-theme.css');
+@import url('theme/_dark-theme.css');
 
 /* --- Components --- */
 @import url('components/_buttons.css');
