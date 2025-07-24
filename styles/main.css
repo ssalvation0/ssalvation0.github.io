@@ -10,6 +10,7 @@
 /* --- Components --- */
 @import url('components/_buttons.css');
 @import url('components/_gallery.css');
+@import url('components/_loader.css');
 
 /* --- Layouts --- */
 @import url('layout/_header.css');

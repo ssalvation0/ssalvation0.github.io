@@ -94,4 +94,14 @@ function initializeWebsite() {
     initMobileMenu();
     initThemeSwitcher();
 }
+
+// Додати обробник події для завантаження сторінки, щоб приховати лоадер
+window.addEventListener('load', function() {
+    const loader = document.getElementById('loader');
+    if (loader) {
+      loader.style.opacity = '0';
+      loader.style.transition = 'opacity 0.3s ease';
+      setTimeout(() => loader.remove(), 300);
+    }
+  });
 document.addEventListener("DOMContentLoaded", initializeWebsite);
