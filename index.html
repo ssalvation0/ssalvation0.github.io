@@ -30,9 +30,8 @@
     />
     <meta name="twitter:image" content="https://ssalvation0.github.io/og.jpg" />
 
-    <!-- Theme color follows the active scheme -->
-    <meta name="theme-color" content="#fafaf9" media="(prefers-color-scheme: light)" />
-    <meta name="theme-color" content="#09090b" media="(prefers-color-scheme: dark)" />
+    <!-- Theme color — kept in sync with the active (toggled or system) theme via JS below. -->
+    <meta name="theme-color" content="#fafaf9" />
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -51,11 +50,13 @@
             ? stored === "dark"
             : window.matchMedia("(prefers-color-scheme: dark)").matches;
           if (dark) document.documentElement.classList.add("dark");
+          var meta = document.querySelector('meta[name="theme-color"]');
+          if (meta) meta.setAttribute("content", dark ? "#09090b" : "#fafaf9");
         } catch (e) {}
       })();
     </script>
-    <script type="module" crossorigin src="/assets/index-BQOGKNFG.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-COC86LdJ.css">
+    <script type="module" crossorigin src="/assets/index-CEFi6bhO.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-BXd8zFoV.css">
   </head>
   <body>
     <div id="root"></div>
