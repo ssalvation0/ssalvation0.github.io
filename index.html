@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="%BASE_URL%favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Nazar Stefiniv — Web Developer</title>
+    <meta
+      name="description"
+      content="Nazar Stefiniv — Web developer and Computer Science student in Lublin, Poland. I build full-stack web apps with React, TypeScript and Supabase. See my projects, skills and contact."
+    />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://ssalvation0.github.io/" />
+    <meta property="og:title" content="Nazar Stefiniv — Web Developer" />
+    <meta
+      property="og:description"
+      content="Web developer & CS student. React · TypeScript · Supabase. Projects, skills and contact."
+    />
+    <meta property="og:image" content="https://ssalvation0.github.io/og.jpg" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Nazar Stefiniv — Web Developer" />
+    <meta
+      name="twitter:description"
+      content="Web developer & CS student. React · TypeScript · Supabase."
+    />
+    <meta name="twitter:image" content="https://ssalvation0.github.io/og.jpg" />
+
+    <!-- Theme color — kept in sync with the active (toggled or system) theme via JS below. -->
+    <meta name="theme-color" content="#fafaf9" />
+
+    <!-- Fonts are self-hosted via @fontsource (imported in src/main.tsx). -->
+
+    <!-- Set theme before first paint to avoid a flash of the wrong theme (FOUC). -->
+    <script>
+      (function () {
+        try {
+          var stored = localStorage.getItem("theme");
+          var dark = stored
+            ? stored === "dark"
+            : window.matchMedia("(prefers-color-scheme: dark)").matches;
+          if (dark) document.documentElement.classList.add("dark");
+          var meta = document.querySelector('meta[name="theme-color"]');
+          if (meta) meta.setAttribute("content", dark ? "#09090b" : "#fafaf9");
+        } catch (e) {}
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

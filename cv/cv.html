@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Nazar Stefiniv — CV</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&family=Space+Grotesk:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --accent: #4f46e5;
+        --fg: #18181b;
+        --muted: #6b7280;
+        --border: #e5e7eb;
+      }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      @page {
+        size: A4;
+        margin: 0;
+      }
+      html,
+      body {
+        background: #fff;
+      }
+      body {
+        font-family: "Inter", sans-serif;
+        color: var(--fg);
+        font-size: 10.5px;
+        line-height: 1.5;
+        -webkit-font-smoothing: antialiased;
+        padding: 16mm 17mm;
+      }
+
+      /* Header */
+      .head {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        border-bottom: 2px solid var(--accent);
+        padding-bottom: 12px;
+      }
+      .name {
+        font-family: "Space Grotesk", sans-serif;
+        font-size: 30px;
+        font-weight: 700;
+        letter-spacing: -0.5px;
+        line-height: 1.05;
+      }
+      .role {
+        font-family: "JetBrains Mono", monospace;
+        font-size: 11px;
+        color: var(--accent);
+        margin-top: 4px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+      .contact {
+        text-align: right;
+        font-size: 9.8px;
+        color: var(--muted);
+        line-height: 1.7;
+      }
+      .contact a {
+        color: var(--muted);
+        text-decoration: none;
+      }
+      .contact b {
+        color: var(--fg);
+        font-weight: 600;
+      }
+
+      /* Sections */
+      section {
+        margin-top: 18px;
+      }
+      h2 {
+        font-family: "JetBrains Mono", monospace;
+        font-size: 9.5px;
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        color: var(--accent);
+        padding-bottom: 5px;
+        margin-bottom: 9px;
+        border-bottom: 1px solid var(--border);
+      }
+      .profile {
+        color: #3f3f46;
+        font-size: 10.8px;
+        line-height: 1.6;
+      }
+
+      /* Skills */
+      .skill-row {
+        display: grid;
+        grid-template-columns: 90px 1fr;
+        gap: 8px;
+        margin-bottom: 6px;
+      }
+      .skill-row:last-child {
+        margin-bottom: 0;
+      }
+      .skill-label {
+        font-weight: 600;
+        color: var(--fg);
+      }
+      .skill-items {
+        color: #3f3f46;
+      }
+
+      /* Education */
+      .edu-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        margin-bottom: 9px;
+      }
+      .edu-item:last-child {
+        margin-bottom: 0;
+      }
+      .edu-title {
+        font-weight: 600;
+      }
+      .edu-org {
+        color: var(--muted);
+        font-size: 10px;
+      }
+      .edu-period {
+        font-family: "JetBrains Mono", monospace;
+        font-size: 9px;
+        color: var(--muted);
+        white-space: nowrap;
+        padding-left: 12px;
+      }
+
+      .inline-muted {
+        color: #3f3f46;
+      }
+      .accent {
+        color: var(--accent);
+        font-weight: 600;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="head">
+      <div>
+        <div class="name">Nazar Stefiniv</div>
+        <div class="role">Web Developer</div>
+      </div>
+      <div class="contact">
+        <b>Lublin, Poland</b><br />
+        mrawesomey459@gmail.com<br />
+        github.com/ssalvation0<br />
+        <b>ssalvation0.github.io</b> · Telegram @sssalvation
+      </div>
+    </header>
+
+    <section>
+      <h2>Profile</h2>
+      <p class="profile">
+        Computer Science student and web developer based in Lublin, Poland. I
+        build full-stack web apps end to end — from the interface to the data
+        layer, API integrations and deployment. Comfortable with React,
+        TypeScript and Supabase, and quick to learn whatever a project needs.
+        Looking for an internship or junior developer role.
+      </p>
+    </section>
+
+    <section>
+      <h2>Projects</h2>
+      <p class="inline-muted">
+        <b>TransmogVault</b>, <b>Termino</b> &amp; more — live with code at
+        <span class="accent">ssalvation0.github.io</span>
+      </p>
+    </section>
+
+    <section>
+      <h2>Skills</h2>
+      <div class="skill-row">
+        <div class="skill-label">Frontend</div>
+        <div class="skill-items">
+          React, TypeScript, JavaScript (ES6+), HTML5, CSS3, Tailwind CSS,
+          Framer Motion
+        </div>
+      </div>
+      <div class="skill-row">
+        <div class="skill-label">State &amp; Data</div>
+        <div class="skill-items">
+          Zustand, TanStack Query, React Router, REST APIs
+        </div>
+      </div>
+      <div class="skill-row">
+        <div class="skill-label">Backend</div>
+        <div class="skill-items">
+          Node.js, Express, Supabase (Postgres, Auth, Storage)
+        </div>
+      </div>
+      <div class="skill-row">
+        <div class="skill-label">Tools</div>
+        <div class="skill-items">Vite, Git &amp; GitHub, Leaflet</div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Education</h2>
+      <div class="edu-item">
+        <div>
+          <div class="edu-title">BSc Computer Science</div>
+          <div class="edu-org">WSEI Lublin Academy</div>
+        </div>
+        <div class="edu-period">Oct 2024 – Present</div>
+      </div>
+      <div class="edu-item">
+        <div>
+          <div class="edu-title">Natural Sciences &amp; Mathematics</div>
+          <div class="edu-org">Ivan Puluj Lyceum, Ivano-Frankivsk</div>
+        </div>
+        <div class="edu-period">2021 – 2024</div>
+      </div>
+      <div class="edu-item">
+        <div>
+          <div class="edu-title">IT Courses</div>
+          <div class="edu-org">IT-Step Academy of Computer Technologies</div>
+        </div>
+        <div class="edu-period">2019 – 2022</div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Languages</h2>
+      <p class="inline-muted">
+        Ukrainian <span class="accent">(Native)</span> · English
+        <span class="accent">(Professional working)</span> · Polish
+        <span class="accent">(Intermediate)</span>
+      </p>
+    </section>
+  </body>
+</html>

@@ -1,0 +1,174 @@
+@import "tailwindcss";
+
+/* Class-based dark mode toggle (default v4 is prefers-color-scheme only). */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* Semantic tokens — values swap between light and dark.
+   Raw vars live on :root/.dark; @theme inline exposes them as Tailwind utilities
+   (bg-bg, text-fg, border-border, text-accent, ...) that reference the vars at runtime. */
+:root {
+  --bg: #fafaf9; /* stone-50 */
+  --surface: #ffffff;
+  --surface-2: #f5f5f4; /* stone-100 */
+  --border: #e7e5e4; /* stone-200 */
+  --fg: #18181b; /* zinc-900 */
+  --muted: #71717a; /* zinc-500 */
+  --accent: #4f46e5; /* indigo-600 */
+  --accent-fg: #ffffff;
+}
+
+.dark {
+  --bg: #09090b; /* zinc-950 */
+  --surface: #131316;
+  --surface-2: #1c1c20;
+  --border: #27272a; /* zinc-800 */
+  --fg: #fafafa; /* zinc-50 */
+  --muted: #a1a1aa; /* zinc-400 */
+  --accent: #818cf8; /* indigo-400 */
+  --accent-fg: #09090b;
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-border: var(--border);
+  --color-fg: var(--fg);
+  --color-muted: var(--muted);
+  --color-accent: var(--accent);
+  --color-accent-fg: var(--accent-fg);
+
+  --font-sans: "Inter Variable", "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk Variable", "Space Grotesk", ui-sans-serif, sans-serif;
+  --font-mono: "JetBrains Mono Variable", "JetBrains Mono", ui-monospace, "SF Mono", monospace;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--bg);
+    color: var(--fg);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  /* Offset for sticky navbar so anchored sections aren't hidden behind it. */
+  section[id] {
+    scroll-margin-top: 5rem;
+  }
+
+  ::selection {
+    background-color: var(--accent);
+    color: var(--accent-fg);
+  }
+
+  /* Visible focus ring for keyboard users. */
+  :focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+
+  /* Respect users who prefer reduced motion. */
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+/* Subtle background gradient for depth (accent-tinted). */
+.bg-glow {
+  background-image: radial-gradient(
+    ellipse 70% 55% at 50% -10%,
+    color-mix(in oklab, var(--accent) 22%, transparent),
+    transparent 70%
+  );
+}
+
+/* Faint grid pattern for the hero, faded out toward the edges with a mask. */
+.bg-grid {
+  background-image:
+    linear-gradient(
+      to right,
+      color-mix(in oklab, var(--fg) 7%, transparent) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      to bottom,
+      color-mix(in oklab, var(--fg) 7%, transparent) 1px,
+      transparent 1px
+    );
+  background-size: 46px 46px;
+  -webkit-mask-image: radial-gradient(
+    ellipse 75% 70% at 50% 35%,
+    black,
+    transparent 75%
+  );
+  mask-image: radial-gradient(
+    ellipse 75% 70% at 50% 35%,
+    black,
+    transparent 75%
+  );
+}
+
+/* Vivid gradient text for an accent keyword. */
+.text-gradient {
+  background-image: linear-gradient(
+    120deg,
+    var(--accent),
+    #a855f7 45%,
+    #ec4899
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Infinite horizontal marquee (track holds two copies of the content). */
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+.animate-marquee {
+  animation: marquee 32s linear infinite;
+}
+.marquee-mask {
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 12%,
+    black 88%,
+    transparent
+  );
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 12%,
+    black 88%,
+    transparent
+  );
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-marquee {
+    animation: none;
+  }
+}
