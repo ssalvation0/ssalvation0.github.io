@@ -69,7 +69,7 @@ export default function ProjectCard({
             {project.name}
           </h3>
           {project.wip && (
-            <span className="inline-flex items-center gap-1.5 rounded-full border border-amber-400/30 bg-amber-400/10 px-2.5 py-1 text-xs font-medium text-amber-500">
+            <span className="inline-flex items-center gap-1.5 rounded-full border border-amber-400/30 bg-amber-400/10 px-2.5 py-1 text-xs font-medium text-amber-700 dark:text-amber-400">
               <span aria-hidden className="h-1.5 w-1.5 rounded-full bg-amber-500" />
               In development
             </span>

@@ -43,3 +43,18 @@ npm run screenshots
 
 It captures two crops per project — a tall one for the desktop cards and a wide
 one for mobile.
+
+## CV
+
+The downloadable CV (`public/Nazar-Stefiniv-CV.pdf`) is generated from
+`cv/cv.html` — edit the HTML, then:
+
+```bash
+npm run build:cv   # needs Google Chrome installed
+```
+
+It's laid out for applicant-tracking systems (ATS), which read the PDF's text
+layer rather than the visuals: one column in reading order, static Inter fonts
+(variable fonts get embedded as Type3, which some parsers can't read), standard
+section names, no letter-spacing, real links and PDF metadata. The script fails
+if the CV spills onto a second page or embeds a Type3 font.

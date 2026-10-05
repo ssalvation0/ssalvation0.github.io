@@ -27,6 +27,16 @@ export default function Contact() {
           >
             Email me <FiArrowUpRight />
           </a>
+          {/* Visible address for people without a mail client set up for mailto: links. */}
+          <p className="mt-4 text-sm text-muted">
+            or write to{" "}
+            <a
+              href={`mailto:${profile.email}`}
+              className="font-medium text-fg underline-offset-4 hover:text-accent hover:underline"
+            >
+              {profile.email}
+            </a>
+          </p>
 
           <div className="mt-8 flex justify-center">
             <SocialLinks />

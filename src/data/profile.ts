@@ -20,7 +20,7 @@ export const profile = {
   location: "Lublin, Poland",
   origin: "Originally from Ukraine",
   status: "Open to internships & junior roles",
-  email: "mrawesomey459@gmail.com",
+  email: "nazar.stefiniv0@gmail.com",
   bio: [
     "I'm a Computer Science student from Ukraine, now based in Lublin, Poland. I got into development by building things I wanted to exist, then learning whatever each project needed to make them real.",
     "I work across the whole stack: designing the interface, modelling data in Supabase/Postgres, integrating external APIs, and getting it live. I care about readable code and interfaces that stay out of the user's way.",
@@ -42,8 +42,8 @@ export const socials: Social[] = [
   },
   {
     label: "Email",
-    href: "mailto:mrawesomey459@gmail.com",
-    handle: "mrawesomey459@gmail.com",
+    href: "mailto:nazar.stefiniv0@gmail.com",
+    handle: "nazar.stefiniv0@gmail.com",
     icon: "email",
   },
 ];

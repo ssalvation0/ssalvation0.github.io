@@ -33,7 +33,7 @@ export default function Hero() {
             variants={item}
             className="mt-8 font-mono text-sm text-accent"
           >
-            Web Developer · Lublin, Poland
+            {profile.role} · {profile.location}
           </motion.p>
 
           <motion.h1
@@ -43,13 +43,14 @@ export default function Hero() {
             {profile.name}.
           </motion.h1>
 
-          <motion.h2
+          {/* A tagline, not a section — kept out of the heading outline. */}
+          <motion.p
             variants={item}
             className="mt-3 font-display text-3xl font-bold leading-tight tracking-tight text-muted sm:text-5xl"
           >
             I build <span className="text-gradient">full-stack</span> web apps,
             end to end.
-          </motion.h2>
+          </motion.p>
 
           <motion.p
             variants={item}

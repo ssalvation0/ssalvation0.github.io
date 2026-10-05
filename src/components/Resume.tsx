@@ -36,7 +36,7 @@ export default function Resume() {
               <h4 className="mt-1 font-semibold">{item.title}</h4>
               <p className="text-sm text-muted">{item.org}</p>
               {item.detail && (
-                <p className="mt-1.5 text-sm text-muted/80">{item.detail}</p>
+                <p className="mt-1.5 text-sm text-muted">{item.detail}</p>
               )}
             </li>
           ))}

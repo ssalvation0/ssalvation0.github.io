@@ -7,10 +7,10 @@ export type TimelineItem = {
 
 export const education: TimelineItem[] = [
   {
-    title: "Bachelor's Degree, Computer Science",
-    org: "Lublin Academy WSEI",
-    period: "Oct 2024 — Present",
-    detail: "Studying software development and computer science fundamentals.",
+    title: "Bachelor of Engineering (B.Eng.), Computer Science",
+    org: "WSEI University, Lublin",
+    period: "Oct 2024 — Feb 2028 (expected)",
+    detail: "First-cycle engineering studies (inżynier), 3.5 years.",
   },
   {
     title: "Natural Sciences & Mathematics",
